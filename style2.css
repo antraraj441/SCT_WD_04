@@ -1,0 +1,146 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to right, #c9d6ff, #e2e2e2);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  margin: 0;
+  padding: 2rem;
+
+}
+
+.todo-container {
+  background: #ffffffcc;
+  padding: 2rem;
+  border-radius: 12px;
+  width: 380px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  backdrop-filter: blur(8px);
+  text-align: center;
+  width: 100%;
+  max-width: 400px;
+}
+h1 {
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+
+
+input[type="text"],
+input[type="time"] {
+  width: 80%;
+  padding: 10px;
+  margin: 8px 0;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: border 0.3s ease;
+}
+
+
+button {
+  padding: 0.6rem 0.9rem;
+  font-size: 1rem;
+  margin-left: 6px;
+  border: none;
+  border-radius: 6px;
+  background-color: #4caf50;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+button:hover {
+  background-color: #45a049;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 1.5rem;
+}
+
+
+
+
+li {
+    background-color: #f9f9f9;
+  margin: 0.5rem 0;
+  padding: 0.8rem 1rem;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background 0.3s;
+
+}
+li:hover {
+  background-color: #e6f7ff;
+}
+.completed {
+  text-decoration: line-through;
+  color: gray;
+}
+.completed {
+  text-decoration: line-through;
+  color: #888;
+  opacity: 0.6;
+}
+
+small {
+  font-size: 0.8rem;
+  color: #777;
+}
+input:focus {
+  outline: none;
+  border-color;
+}
+/* 1. Fade-in animation for list items */
+@keyframes fadeSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+li {
+  animation: fadeSlideIn 0.4s ease-in-out;
+}
+
+/* 2. Bounce effect for buttons on hover */
+@keyframes bounce {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+button:hover {
+  background-color: #45a049;
+  animation: bounce 0.4s ease;
+}
+
+/* 3. Smooth transition for completed tasks */
+.completed {
+  text-decoration: line-through;
+  color: #888;
+  opacity: 0.6;
+  transition: all 0.4s ease-in-out;
+}
+
+/* 4. Glow effect on focused input fields */
+input:focus {
+  outline: none;
+  border-color: #4caf50;
+  box-shadow: 0 0 6px #4caf5080;
+  transition: box-shadow 0.3s ease;
+}
+
+
